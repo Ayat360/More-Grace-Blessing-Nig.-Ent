@@ -6,6 +6,7 @@ import bowlsImg from "../assets/images/bowls.jpg";
 import basinImg from "../assets/images/basin.jpg";
 import containerImg from "../assets/images/container.jpg";
 import spoonImg from "../assets/images/spoon-set.jpg";
+import heroImg from "../assets/images/hero-plastic.jpg";
 
 function Home() {
     const [openFaq, setOpenFaq] = useState(0);
@@ -104,31 +105,70 @@ const faqs = [
 
   return (
     <div className="home-page">
-      {/* HERO SECTION */}
-      <section className="hero-section reveal">
-        <div className="hero-text">
-          <span className="hero-badge">Trusted Plastic Products Supplier</span>
-          <h1>Quality Plastic Products for Homes & Businesses</h1>
-          <p>
-            MORE GRACE & BLESSING NIGERIA ENTERPRISE delivers durable,
-            affordable, and practical household plastic products for families,
-            retailers, and bulk buyers.
-          </p>
+{/* PREMIUM HERO SECTION */}
+<section className="premium-hero">
+  <div className="premium-hero-content">
+    {/* LEFT SIDE */}
+    <div className="premium-hero-text reveal-left">
+      <span className="hero-tag">Trusted Household Plastic Supplier</span>
 
-          <div className="hero-buttons">
-            <Link to="/products" className="primary-btn btn-link">
-              View Products
-            </Link>
-            <Link to="/contact" className="secondary-btn btn-link">
-              Contact Us
-            </Link>
-          </div>
-        </div>
+      <h1>
+        Durable Plastic Products for
+        <br />
+        Homes, Retailers & Bulk Buyers
+      </h1>
 
-        <div className="hero-image">
-          <img src={bucketImg} alt="Plastic household products" />
-        </div>
-      </section>
+      <p>
+        MORE GRACE & BLESSING NIGERIA ENTERPRISE supplies practical and
+        durable household plastic products designed for everyday use, retail
+        supply, and dependable bulk purchase needs.
+      </p>
+
+      <div className="premium-hero-buttons">
+        <a href="/products" className="hero-primary-btn">
+          Explore Products
+        </a>
+
+        <a
+          href="https://wa.me/2348000000000"
+          target="_blank"
+          rel="noreferrer"
+          className="hero-secondary-btn"
+        >
+          Chat on WhatsApp
+        </a>
+      </div>
+
+      <div className="hero-trust-badges">
+        <div className="hero-badge">Reliable Product Supply</div>
+        <div className="hero-badge">Retail & Wholesale Orders</div>
+        <div className="hero-badge">Business-Friendly Service</div>
+      </div>
+    </div>
+
+    {/* RIGHT SIDE */}
+    <div className="premium-hero-visual reveal-right float-soft">
+      <div className="hero-main-card">
+        <img
+          src={heroImg}
+          alt="Plastic Household Products"
+        />
+      </div>
+
+      <div className="hero-floating-card top-card reveal-zoom">
+        <span>Top Category</span>
+        <h4>Household Utility</h4>
+        <p>Buckets, Basins & Everyday Essentials</p>
+      </div>
+
+      <div className="hero-floating-card bottom-card reveal-zoom">
+        <span>Business Ready</span>
+        <h4>Bulk Orders Supported</h4>
+        <p>Reliable supply for homes, retailers, and resellers</p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* TRUST STATS */}
       <section className="stats-section reveal">
