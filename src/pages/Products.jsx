@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from "react";
+import { useEffect } from "react";
 import bucketImg from "../assets/images/bucket.jpg";
 import platesImg from "../assets/images/plates.jpg";
 import bowlsImg from "../assets/images/bowls.jpg";
@@ -7,6 +8,10 @@ import containerImg from "../assets/images/container.jpg";
 import spoonImg from "../assets/images/spoon-set.jpg";
 
 function Products() {
+    useEffect(() => {
+    document.title = "Products | More Grace & Blessing Nigeria Enterprise";
+  }, []);
+
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedProduct, setSelectedProduct] = useState(null);
 

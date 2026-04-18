@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import bucketImg from "../assets/images/bucket.jpg";
 import platesImg from "../assets/images/plates.jpg";
@@ -10,6 +10,10 @@ import heroImg from "../assets/images/hero-plastic.jpg";
 
 function Home() {
     const [openFaq, setOpenFaq] = useState(0);
+
+    useEffect(() => {
+      document.title = "Home | More Grace & Blessing Nigeria Enterprise";
+    }, []);
   const featuredProducts = [
     {
       name: "Durable Buckets",

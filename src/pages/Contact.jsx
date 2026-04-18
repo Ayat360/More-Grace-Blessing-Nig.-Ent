@@ -1,7 +1,12 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import { useEffect } from "react";
 
 function Contact() {
+useEffect(() => {
+  document.title = "Contact | More Grace & Blessing Nigeria Enterprise";
+}, []);
+
   const [state, handleSubmit] = useForm("mnnjzqpr"); 
   // 👆 Replace "xkgzqvab" with your real Formspree Form ID later
 

@@ -1,8 +1,12 @@
 import React from "react";
+import { useEffect } from "react";
 import bucketImg from "../assets/images/bucket.jpg";
 import bowlsImg from "../assets/images/bowls.jpg";
 
 function About() {
+    useEffect(() => {
+  document.title = "About Us | More Grace & Blessing Nigeria Enterprise";
+}, []);
   const values = [
     {
       title: "Quality Products",

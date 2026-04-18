@@ -20,18 +20,25 @@ function Navbar() {
 
         {/* DESKTOP / MOBILE LINKS */}
         <nav className={`navbar-links ${menuOpen ? "active" : ""}`}>
-          <NavLink to="/" onClick={closeMenu}>
-            Home
-          </NavLink>
-          <NavLink to="/products" onClick={closeMenu}>
-            Products
-          </NavLink>
-          <NavLink to="/about" onClick={closeMenu}>
-            About
-          </NavLink>
-          <NavLink to="/contact" onClick={closeMenu}>
-            Contact
-          </NavLink>
+          <NavLink to="/" className="nav-link">
+  Home
+</NavLink>
+
+<NavLink to="/about" className="nav-link">
+  About
+</NavLink>
+
+<NavLink to="/products" className="nav-link">
+  Products
+</NavLink>
+
+<NavLink to="/gallery" className="nav-link">
+  Gallery
+</NavLink>
+
+<NavLink to="/contact" className="nav-link">
+  Contact
+</NavLink>
 
           <a
             href="https://wa.me/2348000000000"
