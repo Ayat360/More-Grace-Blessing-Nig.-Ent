@@ -115,7 +115,11 @@ export default function Gallery() {
         className="gallery-card"
         onClick={() => setActiveItem(item)}
       >
-        <img src={item.image} alt={item.title} />
+      <img
+  src={item.image}
+  alt={item.title}
+  loading="lazy"
+/>
 
         <div className="gallery-info">
           <h4>{highlightText(item.title, search)}</h4>

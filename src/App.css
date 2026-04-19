@@ -4704,3 +4704,13 @@ a:hover,
     background-position: -100% 0;
   }
 }
+.gallery-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
