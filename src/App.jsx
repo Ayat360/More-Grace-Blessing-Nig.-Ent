@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Gallery from "./pages/Gallery";
 
+
 import "./App.css";
 
 function App() {
