@@ -21,7 +21,7 @@ const galleryData = Array.from({ length: 50 }, (_, i) => {
     id: i + 1,
     category,
     title: `${category} Product ${i + 1}`,
-    image: "/images/gallery/placeholder.jpg",
+    image: `/images/products/${category.toLowerCase()}${(i % 10) + 1}.jpg`,
     details: descriptions[category],
   };
 });
