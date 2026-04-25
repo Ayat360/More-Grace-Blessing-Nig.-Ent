@@ -31,6 +31,7 @@ export default function Gallery() {
   const [filter, setFilter] = useState("All");
   const [activeItem, setActiveItem] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [quickView, setQuickView] = useState(null);
 
   useEffect(() => {
   const timer = setTimeout(() => setLoading(false), 600);
@@ -113,7 +114,7 @@ export default function Gallery() {
       <div
         key={item.id}
         className="gallery-card"
-        onClick={() => setActiveItem(item)}
+        onClick={() => setQuickView(item)}
       >
       <img
   src={item.image}
@@ -135,6 +136,29 @@ export default function Gallery() {
   <div className="no-results">
     <h3>No products found</h3>
     <p>Try adjusting your search or category filter.</p>
+  </div>
+)}
+
+{quickView && (
+  <div className="quickview-overlay" onClick={() => setQuickView(null)}>
+    <div
+      className="quickview-panel"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        className="close-btn"
+        onClick={() => setQuickView(null)}
+      >
+        ×
+      </button>
+
+      <img src={quickView.image} alt={quickView.title} />
+
+      <h2>{quickView.title}</h2>
+      <p>{quickView.details}</p>
+
+      <span className="tag">{quickView.category}</span>
+    </div>
   </div>
 )}
 
