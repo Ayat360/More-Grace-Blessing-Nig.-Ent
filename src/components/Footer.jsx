@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -49,6 +50,23 @@ function Footer() {
 
       <div className="footer-bottom">
         <p>© 2026 MORE GRACE & BLESSING NIGERIA ENTERPRISE. All rights reserved.</p>
+        <div className="footer-socials">
+  <a
+    href="https://facebook.com"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <FaFacebook />
+  </a>
+
+  <a
+    href="https://instagram.com"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <FaInstagram />
+  </a>
+</div>
         <span>Built for trust, supply, and everyday value.</span>
       </div>
     </footer>

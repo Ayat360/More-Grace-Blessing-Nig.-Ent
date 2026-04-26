@@ -2,18 +2,6 @@ import React, { useState, useEffect } from "react";
 
 const categories = ["Buckets", "Basins", "Plates", "Containers"];
 
-const descriptions = {
-  Buckets:
-    "Durable household bucket designed for water storage, cleaning, and everyday home use.",
-  Basins:
-    "Strong plastic basin suitable for laundry, washing, and general household tasks.",
-  Plates:
-    "Lightweight and durable plastic plates designed for daily family meals and events.",
-  Containers:
-    "Multi-purpose storage container for food preservation and household organization.",
-};
-
-
 const galleryData = [
   {
     id: 1,

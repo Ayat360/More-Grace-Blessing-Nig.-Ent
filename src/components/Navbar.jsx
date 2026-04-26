@@ -7,16 +7,35 @@ function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <header className="modern-navbar">
-      <div className="navbar-container">
-        {/* LOGO */}
-        <Link to="/" className="navbar-logo" onClick={closeMenu}>
-          <div className="logo-mark">MG</div>
-          <div className="logo-text">
-            <h2>MORE GRACE & BLESSING</h2>
-            <span>NIGERIA ENTERPRISE</span>
-          </div>
-        </Link>
+<header className="modern-navbar">
+  <div className="navbar-container">
+
+    {/* LOGO */}
+    <Link to="/" className="logo-wrapper" onClick={closeMenu}>
+
+      <img
+        src="/images/logo.png"
+        alt="More Grace & Blessing Logo"
+        className="navbar-logo"
+      />
+
+      <div className="logo-text">
+        <h2 className="brand-name">
+          MORE GRACE & BLESSING
+        </h2>
+
+        <span className="brand-sub">
+          NIGERIA ENTERPRISE
+        </span>
+      </div>
+
+          {/* CAC UNDER BRAND */}
+    <span className="cac-badge under">
+      CAC Registered
+    </span>
+  
+
+    </Link>
 
         {/* DESKTOP / MOBILE LINKS */}
         <nav className={`navbar-links ${menuOpen ? "active" : ""}`}>

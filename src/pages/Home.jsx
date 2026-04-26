@@ -8,8 +8,57 @@ import containerImg from "../assets/images/container.jpg";
 import spoonImg from "../assets/images/spoon-set.jpg";
 import heroImg from "../assets/images/hero-plastic.jpg";
 
+// =========================
+// COUNT UP HOOK (ADD HERE)
+// =========================
+const useCountUp = (end, duration = 1500, trigger = true) => {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    if (!trigger) return;
+
+    let start = 0;
+    const increment = end / (duration / 16);
+
+    const counter = setInterval(() => {
+      start += increment;
+
+      if (start >= end) {
+        clearInterval(counter);
+        setCount(end);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+
+    return () => clearInterval(counter);
+  }, [end, duration, trigger]);
+
+  return count;
+};
+
 function Home() {
-    const [openFaq, setOpenFaq] = useState(0);
+    const [startCount, setStartCount] = useState(false);
+    const [openFaq, setOpenFaq] = useState(null);
+    useEffect(() => {
+  const handleScroll = () => {
+    const section = document.querySelector(".stats-section");
+    if (!section) return;
+
+    const rect = section.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight - 100) {
+      setStartCount(true);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+    const productsCount = useCountUp(100, 1500, startCount);
+const buyersCount = useCountUp(50, 1500, startCount);
 
     useEffect(() => {
       document.title = "Home | More Grace & Blessing Nigeria Enterprise";
@@ -174,17 +223,51 @@ const faqs = [
   </div>
 </section>
 
-      {/* TRUST STATS */}
-      <section className="stats-section reveal">
-        <div className="stats-grid">
-          {trustStats.map((item, index) => (
-            <div className="stat-card" key={index}>
-              <h3>{item.number}</h3>
-              <p>{item.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+{/* STATSTRUST */}
+<section className="stats-section reveal">
+<div className="stats-marquee">
+  <div className="stats-track">
+
+    <div className="stat-card">
+      <div className="stat-icon">📦</div>
+      <h3>{productsCount}+</h3>
+      <p>Products Supplied</p>
+    </div>
+
+    <div className="stat-card">
+      <div className="stat-icon">👥</div>
+      <h3>{buyersCount}+</h3>
+      <p>Happy Buyers</p>
+    </div>
+
+    <div className="stat-card">
+      <div className="stat-icon">🏪</div>
+      <h3>Bulk</h3>
+      <p>Retail & Wholesale</p>
+    </div>
+
+    <div className="stat-card">
+      <div className="stat-icon">⚡</div>
+      <h3>Reliable</h3>
+      <p>Business Service</p>
+    </div>
+
+    {/* duplicate for loop */}
+    <div className="stat-card">
+      <div className="stat-icon">📦</div>
+      <h3>{productsCount}+</h3>
+      <p>Products Supplied</p>
+    </div>
+
+    <div className="stat-card">
+      <div className="stat-icon">👥</div>
+      <h3>{buyersCount}+</h3>
+      <p>Happy Buyers</p>
+    </div>
+
+  </div>
+</div>
+</section>
 
       {/* FEATURED PRODUCTS */}
       <section className="featured-section reveal section-divider">

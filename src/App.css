@@ -1703,42 +1703,83 @@ html {
    BRAND AUTHORITY UPGRADE
 ========================= */
 
-/* TRUST STATS */
+/* =========================
+   TRUST STATS PREMIUM SECTION
+========================= */
+
 .stats-section {
-  padding: 30px 8% 80px;
-  background: white;
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #f8fbff, #ffffff);
 }
 
+.stats-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* HEADER */
+.stats-header h2 {
+  font-size: 2rem;
+  color: #0d3b66;
+  margin-bottom: 10px;
+}
+
+.stats-header p {
+  color: #666;
+  font-size: 0.95rem;
+  max-width: 500px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* GRID */
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
+/* CARD */
 .stat-card {
-  background: #f7fbff;
-  border-radius: 22px;
-  padding: 35px 24px;
-  text-align: center;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.04);
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
   transition: 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
 }
 
 .stat-card:hover {
   transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
 }
 
+/* NUMBER */
 .stat-card h3 {
-  font-size: 2.1rem;
-  color: #0d3b66;
-  margin-bottom: 10px;
-  font-weight: 800;
+  font-size: 2rem;
+  color: #25d366;
+  margin-bottom: 8px;
+  font-weight: 700;
 }
 
+/* LABEL */
 .stat-card p {
-  color: #555;
-  font-weight: 600;
-  line-height: 1.7;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* BUSINESS BUYERS SECTION */
@@ -3314,6 +3355,19 @@ body {
 /* =========================
    MODERN FOOTER REDESIGN
 ========================= */
+  .footer {
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .footer-socials {
+    justify-content: center;
+    margin-top: 12px;
+  }
+
+  .footer-socials a {
+    font-size: 1.3rem;
+  }
 
 .modern-footer {
   background: #071c2f;
@@ -4850,4 +4904,435 @@ a:hover,
   border: none;
   cursor: pointer;
   color: #0d3b66;
+}
+.footer-socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.footer-socials a {
+  font-size: 1.4rem;
+  color: #0d3b66;
+  transition: 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #25d366;
+  transform: translateY(-2px);
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cac-badge {
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0d3b66, #25d366);
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+/* LOGO WRAPPER */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+/* IMAGE LOGO */
+.navbar-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* TEXT BLOCK */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+/* MAIN BRAND NAME */
+.brand-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0d3b66;
+  margin: 0;
+}
+
+/* SUB TEXT */
+.brand-sub {
+  font-size: 0.75rem;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+/* CAC BADGE */
+.cac-badge {
+  margin-left: 10px;
+  font-size: 0.65rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0d3b66, #25d366);
+  color: white;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .cac-badge {
+    display: inline-block;
+    font-size: 0.6rem;
+    padding: 3px 8px;
+    margin-left: 8px;
+  }
+
+  .navbar-logo {
+    height: 38px;
+  }
+
+  .brand-name {
+    font-size: 0.85rem;
+  }
+
+  .brand-sub {
+    font-size: 0.65rem;
+  }
+}
+/* CAC UNDER TEXT STYLE */
+.cac-badge.under {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.65rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0d3b66, #25d366);
+  color: white;
+  font-weight: 500;
+  width: fit-content;
+}
+@media (max-width: 768px) {
+  .cac-badge.under {
+    font-size: 0.6rem;
+    padding: 3px 8px;
+    margin-top: 3px;
+  }
+}
+/* =========================
+   FINAL BOSS MARQUEE SYSTEM
+========================= */
+
+.stats-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 40px 0;
+
+  /* subtle living background */
+  background: radial-gradient(circle at 20% 10%, rgba(37,211,102,0.08), transparent 40%),
+              radial-gradient(circle at 80% 60%, rgba(0,123,255,0.06), transparent 50%);
+}
+
+/* EDGE FADE */
+.stats-marquee::before,
+.stats-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 160px;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.stats-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #f8fbff, transparent);
+}
+
+.stats-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #f8fbff, transparent);
+}
+
+/* TRACK (multi-motion system) */
+.stats-track {
+  display: flex;
+  gap: 28px;
+  width: max-content;
+
+  animation: bossScroll 26s linear infinite;
+  will-change: transform;
+}
+
+/* PRIMARY SCROLL */
+@keyframes bossScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* CARD (LUXURY GLASS) */
+.stat-card {
+  min-width: 260px;
+  padding: 30px 22px;
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(0,0,0,0.05);
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+
+  text-align: center;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+}
+
+/* FLOAT DRIFT (SUBTLE LIFE) */
+.stat-card {
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ICON */
+.stat-icon {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+/* NUMBER */
+.stat-card h3 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #25d366;
+}
+
+/* TEXT */
+.stat-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* LIGHT SWEEP */
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+  transform: skewX(-20deg);
+}
+
+.stat-card:hover::before {
+  animation: shine 1s ease;
+}
+
+@keyframes shine {
+  0% { left: -120%; }
+  100% { left: 200%; }
+}
+
+/* HOVER LIFT (FINAL BOSS FEEL) */
+.stat-card:hover {
+  transform: translateY(-12px) scale(1.06);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.15);
+}
+
+/* PAUSE ON HOVER */
+.stats-marquee:hover .stats-track {
+  animation-play-state: paused;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  .stat-card {
+    min-width: 220px;
+    padding: 24px 18px;
+  }
+
+  .stats-marquee::before,
+  .stats-marquee::after {
+    width: 80px;
+  }
+}
+/* =========================
+   FINAL BOSS MARQUEE SYSTEM
+========================= */
+
+.stats-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 40px 0;
+
+  /* subtle living background */
+  background: radial-gradient(circle at 20% 10%, rgba(37,211,102,0.08), transparent 40%),
+              radial-gradient(circle at 80% 60%, rgba(0,123,255,0.06), transparent 50%);
+}
+
+/* EDGE FADE */
+.stats-marquee::before,
+.stats-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 160px;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.stats-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #f8fbff, transparent);
+}
+
+.stats-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #f8fbff, transparent);
+}
+
+/* TRACK (multi-motion system) */
+.stats-track {
+  display: flex;
+  gap: 28px;
+  width: max-content;
+
+  animation: bossScroll 26s linear infinite;
+  will-change: transform;
+}
+
+/* PRIMARY SCROLL */
+@keyframes bossScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* CARD (LUXURY GLASS) */
+.stat-card {
+  min-width: 260px;
+  padding: 30px 22px;
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(0,0,0,0.05);
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+
+  text-align: center;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+}
+
+/* FLOAT DRIFT (SUBTLE LIFE) */
+.stat-card {
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ICON */
+.stat-icon {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+/* NUMBER */
+.stat-card h3 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #25d366;
+}
+
+/* TEXT */
+.stat-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* LIGHT SWEEP */
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+  transform: skewX(-20deg);
+}
+
+.stat-card:hover::before {
+  animation: shine 1s ease;
+}
+
+@keyframes shine {
+  0% { left: -120%; }
+  100% { left: 200%; }
+}
+
+/* HOVER LIFT (FINAL BOSS FEEL) */
+.stat-card:hover {
+  transform: translateY(-12px) scale(1.06);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.15);
+}
+
+/* PAUSE ON HOVER */
+.stats-marquee:hover .stats-track {
+  animation-play-state: paused;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  .stat-card {
+    min-width: 220px;
+    padding: 24px 18px;
+  }
+
+  .stats-marquee::before,
+  .stats-marquee::after {
+    width: 80px;
+  }
 }
