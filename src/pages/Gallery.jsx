@@ -14,17 +14,43 @@ const descriptions = {
 };
 
 
-const galleryData = Array.from({ length: 50 }, (_, i) => {
-  const category = categories[i % categories.length];
-
-  return {
-    id: i + 1,
-    category,
-    title: `${category} Product ${i + 1}`,
-    image: `/images/products/${category.toLowerCase()}${(i % 10) + 1}.jpg`,
-    details: descriptions[category],
-  };
-});
+const galleryData = [
+  {
+    id: 1,
+    category: "Buckets",
+    title: "Heavy Duty Water Bucket",
+    image: "/images/products/bucket1.jpg",
+    details: "Strong plastic bucket designed for water storage and daily household use.",
+  },
+  {
+    id: 2,
+    category: "Buckets",
+    title: "Premium Household Bucket",
+    image: "/images/products/bucket2.jpg",
+    details: "Durable bucket suitable for cleaning and outdoor use.",
+  },
+  {
+    id: 3,
+    category: "Basins",
+    title: "Laundry Basin Large Size",
+    image: "/images/products/basin1.jpg",
+    details: "Large basin ideal for washing clothes and home chores.",
+  },
+  {
+    id: 4,
+    category: "Plates",
+    title: "Family Dining Plate Set",
+    image: "/images/products/plate1.jpg",
+    details: "Lightweight plastic plates perfect for daily meals.",
+  },
+  {
+    id: 5,
+    category: "Containers",
+    title: "Food Storage Container",
+    image: "/images/products/container1.jpg",
+    details: "Airtight container for storing food safely.",
+  }
+];
 
 export default function Gallery() {
   const [search, setSearch] = useState("");
