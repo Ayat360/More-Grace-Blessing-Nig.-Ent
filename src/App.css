@@ -4480,167 +4480,6 @@ a:hover,
     transform: translateY(0);
   }
 }
-/* ======================
-   GALLERY PAGE
-====================== */
-
-.gallery-page {
-  padding: 80px 6%;
-  background: #f9fafc;
-}
-
-.gallery-title {
-  font-size: 2.5rem;
-  color: #0d3b66;
-  margin-bottom: 20px;
-}
-
-/* FILTERS */
-.gallery-filters {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-}
-
-.filter-btn {
-  padding: 10px 16px;
-  border: 1px solid #0d3b66;
-  background: white;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.filter-btn.active {
-  background: #0d3b66;
-  color: white;
-}
-
-/* GRID */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.gallery-card {
-  background: white;
-  border-radius: 16px;
-  overflow: hidden;
-  cursor: pointer;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.gallery-card:hover {
-  transform: translateY(-6px);
-}
-
-.gallery-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.gallery-info {
-  padding: 12px;
-}
-
-.gallery-info h3 {
-  color: #0d3b66;
-  font-size: 1.1rem;
-}
-
-/* MODAL */
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-box {
-  background: white;
-  padding: 20px;
-  border-radius: 16px;
-  width: 90%;
-  max-width: 500px;
-  text-align: center;
-}
-
-.modal-box img {
-  width: 100%;
-  border-radius: 12px;
-  margin-bottom: 15px;
-}
-
-.modal-box button {
-  margin-top: 15px;
-  padding: 10px 16px;
-  border: none;
-  background: #0d3b66;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
-}
-/* =========================
-   PRODUCT COLOR VARIANTS
-========================= */
-
-.color-dots {
-  display: flex;
-  gap: 6px;
-  margin-top: 10px;
-  align-items: center;
-}
-
-.color-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  display: inline-block;
-  border: 2px solid #fff;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-  cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.color-dot:hover {
-  transform: scale(1.25);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
-}
-/* =========================
-   SEARCH BAR
-========================= */
-
-.gallery-search {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.gallery-search input {
-  width: 100%;
-  max-width: 420px;
-  padding: 12px 16px;
-  border-radius: 14px;
-  border: 1px solid #ddd;
-  outline: none;
-  font-size: 1rem;
-  transition: 0.3s ease;
-}
-
-.gallery-search input:focus {
-  border-color: #0d3b66;
-  box-shadow: 0 0 0 3px rgba(13, 59, 102, 0.1);
-}
-/* =========================
-   PREMIUM MODAL ANIMATION
-========================= */
-
 /* =========================
    PREMIUM MODAL (FULL UX FIX)
 ========================= */
@@ -5334,5 +5173,350 @@ a:hover,
   .stats-marquee::before,
   .stats-marquee::after {
     width: 80px;
+  }
+}
+/* =========================
+   ENTERPRISE GALLERY SYSTEM
+========================= */
+
+.gallery-page {
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.gallery-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.gallery-search {
+  margin-bottom: 20px;
+}
+
+.gallery-search input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  outline: none;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.gallery-search input:focus {
+  border-color: #111827;
+}
+
+/* =========================
+   FILTERS
+========================= */
+
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  padding: 10px 16px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.25s ease;
+}
+
+.filter-btn:hover {
+  border-color: #111827;
+  color: #111827;
+}
+
+.filter-btn.active {
+  background: #111827;
+  color: #fff;
+  border-color: #111827;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.gallery-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  transition: 0.25s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* IMAGE */
+
+.gallery-image-wrap {
+  width: 100%;
+  height: 240px;
+  background: #f3f4f6;
+  overflow: hidden;
+}
+
+.gallery-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.03);
+}
+
+/* CONTENT */
+
+.gallery-content {
+  padding: 18px;
+}
+
+.gallery-category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #16a34a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.gallery-content h3 {
+  font-size: 1.1rem;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.gallery-content p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* BUTTON */
+
+.gallery-view-btn {
+  width: 100%;
+  padding: 12px;
+  background: #111827;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.gallery-view-btn:hover {
+  background: #16a34a;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+}
+
+.no-results h3 {
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+/* =========================
+   HIGHLIGHT SEARCH
+========================= */
+
+.highlight {
+  background: #fef08a;
+  padding: 2px 4px;
+}
+
+/* =========================
+   DETAILS PANEL (SIDE VIEW)
+========================= */
+
+.details-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 999;
+}
+
+.details-panel {
+  width: 100%;
+  max-width: 950px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+/* IMAGE */
+
+.details-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTENT */
+
+.details-content {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.details-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #16a34a;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.details-content h2 {
+  font-size: 1.8rem;
+  color: #111827;
+  margin-bottom: 14px;
+}
+
+.details-content p {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+/* ACTIONS */
+
+.details-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.details-btn {
+  padding: 12px 18px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.25s ease;
+}
+
+.details-btn.primary {
+  background: #16a34a;
+  color: #fff;
+}
+
+.details-btn.primary:hover {
+  background: #15803d;
+}
+
+.details-btn.secondary {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.details-btn.secondary:hover {
+  background: #e5e7eb;
+}
+
+/* =========================
+   SKELETON LOADING
+========================= */
+
+.skeleton-card {
+  height: 320px;
+  background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+  .gallery-title {
+    font-size: 1.5rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-image-wrap {
+    height: 200px;
+  }
+
+  .details-panel {
+    grid-template-columns: 1fr;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .details-image {
+    height: 260px;
+  }
+
+  .details-content {
+    padding: 20px;
+  }
+
+  .details-actions {
+    flex-direction: column;
+  }
+
+  .details-btn {
+    width: 100%;
   }
 }

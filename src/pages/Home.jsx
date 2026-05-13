@@ -63,23 +63,6 @@ const buyersCount = useCountUp(50, 1500, startCount);
     useEffect(() => {
       document.title = "Home | More Grace & Blessing Nigeria Enterprise";
     }, []);
-  const featuredProducts = [
-    {
-      name: "Durable Buckets",
-      desc: "Strong and reliable buckets for home and commercial use.",
-      image: bucketImg,
-    },
-    {
-      name: "Plastic Plates",
-      desc: "Quality reusable plates designed for everyday convenience.",
-      image: platesImg,
-    },
-    {
-      name: "Kitchen Bowls",
-      desc: "Versatile bowls for kitchens, food prep, and storage needs.",
-      image: bowlsImg,
-    },
-  ];
 
 const categories = [
   {
@@ -114,7 +97,7 @@ const categories = [
     { number: "Bulk", label: "Retail & Wholesale Orders" },
     { number: "Reliable", label: "Business Service" },
   ];
-
+  
 const testimonials = [
   {
     name: "Retail Buyer",
@@ -200,7 +183,7 @@ const faqs = [
     </div>
 
     {/* RIGHT SIDE */}
-    <div className="premium-hero-visual reveal-right float-soft">
+    <div className="premium-hero-visual reveal-right">
       <div className="hero-main-card">
         <img
           src={heroImg}
@@ -208,7 +191,7 @@ const faqs = [
         />
       </div>
 
-      <div className="hero-floating-card top-card reveal-zoom">
+      <div className="hero-floating-card bottom-card">
         <span>Top Category</span>
         <h4>Household Utility</h4>
         <p>Buckets, Basins & Everyday Essentials</p>
@@ -229,38 +212,38 @@ const faqs = [
   <div className="stats-track">
 
     <div className="stat-card">
-      <div className="stat-icon">📦</div>
+      <div className="stat-line"></div>
       <h3>{productsCount}+</h3>
       <p>Products Supplied</p>
     </div>
 
     <div className="stat-card">
-      <div className="stat-icon">👥</div>
+      <div className="stat-line"></div>
       <h3>{buyersCount}+</h3>
       <p>Happy Buyers</p>
     </div>
 
     <div className="stat-card">
-      <div className="stat-icon">🏪</div>
+      <div className="stat-line"></div>
       <h3>Bulk</h3>
       <p>Retail & Wholesale</p>
     </div>
 
     <div className="stat-card">
-      <div className="stat-icon">⚡</div>
+      <div className="stat-line"></div>
       <h3>Reliable</h3>
       <p>Business Service</p>
     </div>
 
     {/* duplicate for loop */}
     <div className="stat-card">
-      <div className="stat-icon">📦</div>
+      <div className="stat-line"></div>
       <h3>{productsCount}+</h3>
       <p>Products Supplied</p>
     </div>
 
     <div className="stat-card">
-      <div className="stat-icon">👥</div>
+      <div className="stat-line"></div>
       <h3>{buyersCount}+</h3>
       <p>Happy Buyers</p>
     </div>
@@ -268,38 +251,6 @@ const faqs = [
   </div>
 </div>
 </section>
-
-      {/* FEATURED PRODUCTS */}
-      <section className="featured-section reveal section-divider">
-        <div className="section-header">
-          <span>Featured Products</span>
-          <h2>Reliable Products Built for Everyday Use</h2>
-          <p>
-            Explore some of our most in-demand household plastic products trusted by customers.
-          </p>
-        </div>
-
-        <div className="product-grid">
-          {featuredProducts.map((product, index) => (
-            <div className="product-card" key={index}>
-              <img src={product.image} alt={product.name} />
-              <div className="product-card-content">
-                <span className="product-badge">Best Seller</span>
-                <h3>{product.name}</h3>
-                <p>{product.desc}</p>
-                <a
-                  href="https://wa.me/2348000000000"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="product-order-btn"
-                >
-                  Order on WhatsApp
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* WHY CHOOSE US */}
       <section className="why-section reveal section-divider">

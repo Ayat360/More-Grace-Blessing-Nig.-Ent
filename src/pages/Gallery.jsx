@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const categories = ["Buckets", "Basins", "Plates", "Containers"];
+const categories = ["Buckets", "Basins", "Plates", "Containers", "Flask"];
 
 const galleryData = [
   {
@@ -37,13 +37,19 @@ const galleryData = [
     title: "Food Storage Container",
     image: "/images/products/container1.jpg",
     details: "Airtight container for storing food safely.",
-  }
+  },
+  {
+    id: 6,
+    category: "Flask",
+    title: "Food flask",
+    image: "/images/products/flask1.jpg",
+    details: "jsdjdndjdj.",
+  },
 ];
 
 export default function Gallery() {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("All");
-  const [activeItem, setActiveItem] = useState(null);
   const [loading, setLoading] = useState(true);
   const [quickView, setQuickView] = useState(null);
 
@@ -124,24 +130,40 @@ export default function Gallery() {
       <p>Try adjusting your search or category filter.</p>
     </div>
   ) : (
-    filtered.map((item) => (
-      <div
-        key={item.id}
-        className="gallery-card"
+filtered.map((item) => (
+  <div className="gallery-card" key={item.id}>
+
+    <div className="gallery-image-wrap">
+      <img
+        src={item.image}
+        alt={item.title}
+        loading="lazy"
+      />
+    </div>
+
+    <div className="gallery-content">
+
+      <span className="gallery-category">
+        {item.category}
+      </span>
+
+      <h3>
+        {highlightText(item.title, search)}
+      </h3>
+
+      <p>{item.details}</p>
+
+      <button
+        className="gallery-view-btn"
         onClick={() => setQuickView(item)}
       >
-      <img
-  src={item.image}
-  alt={item.title}
-  loading="lazy"
-/>
+        View Details
+      </button>
 
-        <div className="gallery-info">
-          <h4>{highlightText(item.title, search)}</h4>
-          <span>{item.category}</span>
-        </div>
-      </div>
-    ))
+    </div>
+
+  </div>
+))
   )}
 
 </div>
@@ -154,43 +176,57 @@ export default function Gallery() {
 )}
 
 {quickView && (
-  <div className="quickview-overlay" onClick={() => setQuickView(null)}>
+  <div
+    className="details-overlay"
+    onClick={() => setQuickView(null)}
+  >
     <div
-      className="quickview-panel"
+      className="details-panel"
       onClick={(e) => e.stopPropagation()}
     >
-      <button
-        className="close-btn"
-        onClick={() => setQuickView(null)}
-      >
-        ×
-      </button>
 
-      <img src={quickView.image} alt={quickView.title} />
+      <div className="details-image">
+        <img
+          src={quickView.image}
+          alt={quickView.title}
+        />
+      </div>
 
-      <h2>{quickView.title}</h2>
-      <p>{quickView.details}</p>
+      <div className="details-content">
 
-      <span className="tag">{quickView.category}</span>
+        <span className="details-category">
+          {quickView.category}
+        </span>
+
+        <h2>{quickView.title}</h2>
+
+        <p>{quickView.details}</p>
+
+        <div className="details-actions">
+
+          <a
+            href="https://wa.me/2348000000000"
+            target="_blank"
+            rel="noreferrer"
+            className="details-btn primary"
+          >
+            Contact Us
+          </a>
+
+          <button
+            className="details-btn secondary"
+            onClick={() => setQuickView(null)}
+          >
+            Close
+          </button>
+
+        </div>
+
+      </div>
+
     </div>
   </div>
 )}
-
-        {/* MODAL */}
-        {activeItem && (
-          <div
-            className="modal-overlay show"
-            onClick={() => setActiveItem(null)}
-          >
-            <div className="modal-box" onClick={(e) => e.stopPropagation()}>
-              <img src={activeItem.image} alt={activeItem.title} />
-              <h2>{activeItem.title}</h2>
-              <p>{activeItem.details}</p>
-              <button onClick={() => setActiveItem(null)}>Close</button>
-            </div>
-          </div>
-        )}
-
       </div>
     </section>
   );
