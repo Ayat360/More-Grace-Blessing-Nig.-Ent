@@ -18,7 +18,7 @@ function Navbar() {
           onClick={closeMenu}
         >
           <img
-            src="/logo.png"
+            src="images/logo.png"
             alt="More Grace & Blessing"
             className="brand-logo"
           />
