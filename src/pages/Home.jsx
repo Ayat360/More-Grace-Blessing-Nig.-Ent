@@ -205,7 +205,35 @@ const faqs = [
     </div>
   </div>
 </section>
+{/* ENTERPRISE INFO STRIP */}
 
+<section className="enterprise-strip">
+
+  <div className="enterprise-strip-grid">
+
+    <div className="enterprise-strip-item">
+      <h4>Lagos Based</h4>
+      <p>Reliable household plastic supplier</p>
+    </div>
+
+    <div className="enterprise-strip-item">
+      <h4>Retail & Wholesale</h4>
+      <p>Flexible supply for businesses and homes</p>
+    </div>
+
+    <div className="enterprise-strip-item">
+      <h4>Fast Response</h4>
+      <p>Quick communication through WhatsApp</p>
+    </div>
+
+    <div className="enterprise-strip-item">
+      <h4>Trusted Service</h4>
+      <p>Focused on quality and reliability</p>
+    </div>
+
+  </div>
+
+</section>
 {/* STATSTRUST */}
 <section className="stats-section reveal">
 <div className="stats-marquee">
@@ -252,35 +280,92 @@ const faqs = [
 </div>
 </section>
 
-      {/* WHY CHOOSE US */}
-      <section className="why-section reveal section-divider">
-        <div className="section-header">
-          <span>Why Choose Us</span>
-          <h2>Why Customers Trust Our Products</h2>
-        </div>
+     {/* BUSINESS ADVANTAGES */}
 
-        <div className="why-grid">
-          <div className="why-card">
-            <h3>Quality Materials</h3>
-            <p>Our products are built to last and serve everyday household needs effectively.</p>
-          </div>
+<section className="advantages-section reveal section-divider">
 
-          <div className="why-card">
-            <h3>Affordable Pricing</h3>
-            <p>We offer practical pricing for both individual buyers and wholesale customers.</p>
-          </div>
+  <div className="advantages-header">
+    <span>Business Advantages</span>
 
-          <div className="why-card">
-            <h3>Bulk Supply</h3>
-            <p>Perfect for retailers, distributors, and business owners buying in quantity.</p>
-          </div>
+    <h2>
+      Built Around Reliable Product Supply
+    </h2>
 
-          <div className="why-card">
-            <h3>Trusted Service</h3>
-            <p>We focus on reliability, customer satisfaction, and long-term business relationships.</p>
-          </div>
-        </div>
-      </section>
+    <p>
+      MORE GRACE & BLESSING NIGERIA ENTERPRISE focuses on
+      dependable household plastic products, business-friendly
+      service, and consistent supply support for homes,
+      retailers, and wholesale buyers.
+    </p>
+  </div>
+
+  <div className="advantages-layout">
+
+    {/* LEFT */}
+
+    <div className="advantages-main-card">
+
+      <div className="advantage-number">
+        01
+      </div>
+
+      <h3>
+        Reliable Everyday Products
+      </h3>
+
+      <p>
+        Our household plastic products are selected to support
+        practical daily use with durability, affordability,
+        and dependable availability.
+      </p>
+
+    </div>
+
+    {/* RIGHT */}
+
+    <div className="advantages-grid">
+
+      <div className="advantage-mini-card">
+        <h4>Wholesale Support</h4>
+
+        <p>
+          Flexible supply for retailers, distributors,
+          and repeat business orders.
+        </p>
+      </div>
+
+      <div className="advantage-mini-card">
+        <h4>Fast Communication</h4>
+
+        <p>
+          Easy customer inquiries and order discussions
+          through WhatsApp support.
+        </p>
+      </div>
+
+      <div className="advantage-mini-card">
+        <h4>Consistent Availability</h4>
+
+        <p>
+          Product categories designed around everyday
+          household demand.
+        </p>
+      </div>
+
+      <div className="advantage-mini-card">
+        <h4>Business Reliability</h4>
+
+        <p>
+          Focused on long-term customer trust and
+          dependable supply relationships.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* BUSINESS BUYERS SECTION */}
       <section className="business-section reveal section-divider">

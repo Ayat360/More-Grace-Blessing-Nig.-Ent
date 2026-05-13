@@ -7,92 +7,109 @@ function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-<header className="modern-navbar">
-  <div className="navbar-container">
+<header className="enterprise-navbar">
 
-    {/* LOGO */}
-    <Link to="/" className="logo-wrapper" onClick={closeMenu}>
+  <div className="navbar-inner">
 
+    {/* LEFT */}
+    <Link
+      to="/"
+      className="navbar-brand"
+      onClick={closeMenu}
+    >
       <img
-        src="/images/logo.png"
-        alt="More Grace & Blessing Logo"
-        className="navbar-logo"
+        src="/logo.png"
+        alt="More Grace & Blessing"
+        className="brand-logo"
       />
 
-      <div className="logo-text">
-        <h2 className="brand-name">
+      <div className="brand-text">
+        <h2>
           MORE GRACE & BLESSING
         </h2>
 
-        <span className="brand-sub">
+        <span>
           NIGERIA ENTERPRISE
         </span>
+
+        <small className="cac-label">
+          CAC REGISTERED BUSINESS
+        </small>
       </div>
-
-          {/* CAC UNDER BRAND */}
-    <span className="cac-badge under">
-      CAC Registered
-    </span>
-  
-
     </Link>
 
-        {/* DESKTOP / MOBILE LINKS */}
-        <nav className={`navbar-links ${menuOpen ? "active" : ""}`}>
-          <NavLink to="/" className="nav-link">
-  Home
-</NavLink>
+    {/* DESKTOP NAV */}
+    <nav className="desktop-nav">
 
-<NavLink to="/about" className="nav-link">
-  About
-</NavLink>
+      <Link to="/">Home</Link>
 
-<NavLink to="/products" className="nav-link">
-  Products
-</NavLink>
+      <Link to="/gallery">
+        Gallery
+      </Link>
 
-<NavLink to="/gallery" className="nav-link">
-  Gallery
-</NavLink>
+      <Link to="/about">
+        About
+      </Link>
 
-<NavLink to="/contact" className="nav-link">
-  Contact
-</NavLink>
+      <Link to="/contact">
+        Contact
+      </Link>
 
-          <a
-            href="https://wa.me/2348000000000"
-            target="_blank"
-            rel="noreferrer"
-            className="mobile-whatsapp-btn"
-            onClick={closeMenu}
-          >
-            WhatsApp Us
-          </a>
-        </nav>
+    </nav>
 
-        {/* RIGHT CTA */}
-        <div className="navbar-actions">
-          <a
-            href="https://wa.me/2348000000000"
-            target="_blank"
-            rel="noreferrer"
-            className="navbar-cta"
-          >
-            WhatsApp Us
-          </a>
+    {/* RIGHT CTA */}
+    <a
+      href="https://wa.me/2348000000000"
+      target="_blank"
+      rel="noreferrer"
+      className="navbar-cta"
+    >
+      WhatsApp Us
+    </a>
 
-          <button
-            className={`menu-toggle ${menuOpen ? "open" : ""}`}
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle Menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </header>
+    {/* MOBILE TOGGLE */}
+    <button
+      className={`menu-toggle ${menuOpen ? "active" : ""}`}
+      onClick={() => setMenuOpen(!menuOpen)}
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  {/* MOBILE MENU */}
+  <div className={`mobile-drawer ${menuOpen ? "show" : ""}`}>
+
+    <Link to="/" onClick={closeMenu}>
+      Home
+    </Link>
+
+    <Link to="/gallery" onClick={closeMenu}>
+      Gallery
+    </Link>
+
+    <Link to="/about" onClick={closeMenu}>
+      About
+    </Link>
+
+    <Link to="/contact" onClick={closeMenu}>
+      Contact
+    </Link>
+
+    <a
+      href="https://wa.me/2348000000000"
+      target="_blank"
+      rel="noreferrer"
+      className="mobile-whatsapp"
+    >
+      Contact on WhatsApp
+    </a>
+
+  </div>
+
+</header>
   );
 }
 

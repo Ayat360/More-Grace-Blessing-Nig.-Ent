@@ -4,72 +4,131 @@ import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="modern-footer">
-      <div className="footer-top">
-        <div className="footer-brand">
-          <span className="footer-badge">MORE GRACE & BLESSING</span>
-          <h2>NIGERIA ENTERPRISE</h2>
-          <p>
-            Supplying durable household plastic products for homes, retailers,
-            resellers, and bulk buyers with reliable service and practical value.
-          </p>
-        </div>
+<footer className="enterprise-footer">
 
-        <div className="footer-links-group">
-          <div className="footer-column">
-            <h3>Quick Links</h3>
-            <Link to="/">Home</Link>
-            <Link to="/products">Products</Link>
-            <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
-          </div>
+  <div className="footer-container">
 
-          <div className="footer-column">
-            <h3>Categories</h3>
-            <p>Buckets & Basins</p>
-            <p>Plates & Bowls</p>
-            <p>Kitchen Utensils</p>
-            <p>Storage Containers</p>
-          </div>
+    {/* COLUMN 1 */}
 
-          <div className="footer-column">
-            <h3>Business Info</h3>
-            <p>Lagos, Nigeria</p>
-            <p>Retail & Wholesale Supply</p>
-            <p>Mon - Sat: 8AM - 6PM</p>
-            <a
-              href="https://wa.me/2348000000000"
-              target="_blank"
-              rel="noreferrer"
-            >
-              WhatsApp Us
-            </a>
-          </div>
-        </div>
+    <div className="footer-brand">
+
+      <img
+        src="/logo.png"
+        alt="More Grace & Blessing"
+        className="footer-logo"
+      />
+
+      <h2>
+        MORE GRACE & BLESSING
+      </h2>
+
+      <span>
+        NIGERIA ENTERPRISE
+      </span>
+
+      <p>
+        Trusted supplier of practical household plastic
+        products for homes, retailers, and wholesale buyers.
+      </p>
+
+      <small className="footer-cac">
+        CAC REGISTERED BUSINESS
+      </small>
+
+    </div>
+
+    {/* COLUMN 2 */}
+
+    <div className="footer-column">
+
+      <h3>Quick Links</h3>
+
+      <Link to="/">Home</Link>
+
+      <Link to="/gallery">
+        Gallery
+      </Link>
+
+      <Link to="/about">
+        About
+      </Link>
+
+      <Link to="/contact">
+        Contact
+      </Link>
+
+    </div>
+
+    {/* COLUMN 3 */}
+
+    <div className="footer-column">
+
+      <h3>Business Info</h3>
+
+      <p>Lagos, Nigeria</p>
+
+      <p>Retail & Wholesale Supply</p>
+
+      <p>Household Plastic Products</p>
+
+      <p>Fast WhatsApp Response</p>
+
+    </div>
+
+    {/* COLUMN 4 */}
+
+    <div className="footer-column">
+
+      <h3>Contact</h3>
+
+      <a
+        href="https://wa.me/2348000000000"
+        target="_blank"
+        rel="noreferrer"
+      >
+        WhatsApp
+      </a>
+
+      <a href="mailto:info@moregrace.com">
+        info@moregrace.com
+      </a>
+
+      <div className="footer-socials">
+
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Facebook
+        </a>
+
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Instagram
+        </a>
+
       </div>
 
-      <div className="footer-bottom">
-        <p>© 2026 MORE GRACE & BLESSING NIGERIA ENTERPRISE. All rights reserved.</p>
-        <div className="footer-socials">
-  <a
-    href="https://facebook.com"
-    target="_blank"
-    rel="noreferrer"
-  >
-    <FaFacebook />
-  </a>
+    </div>
 
-  <a
-    href="https://instagram.com"
-    target="_blank"
-    rel="noreferrer"
-  >
-    <FaInstagram />
-  </a>
-</div>
-        <span>Built for trust, supply, and everyday value.</span>
-      </div>
-    </footer>
+  </div>
+
+  {/* BOTTOM */}
+
+  <div className="footer-bottom">
+
+    <p>
+      © 2026 MORE GRACE & BLESSING NIGERIA ENTERPRISE.
+      All rights reserved.
+    </p>
+
+  </div>
+
+</footer>
   );
 }
 

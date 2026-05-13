@@ -7,43 +7,66 @@ const galleryData = [
     id: 1,
     category: "Buckets",
     title: "Heavy Duty Water Bucket",
+    code: "MG-001",
+    status: "Available",
     image: "/images/products/bucket1.jpg",
-    details: "Strong plastic bucket designed for water storage and daily household use.",
+    details:
+      "Strong plastic bucket designed for water storage and daily household use.",
   },
+
   {
     id: 2,
     category: "Buckets",
     title: "Premium Household Bucket",
+    code: "MG-002",
+    status: "In Stock",
     image: "/images/products/bucket2.jpg",
-    details: "Durable bucket suitable for cleaning and outdoor use.",
+    details:
+      "Durable bucket suitable for cleaning and outdoor use.",
   },
+
   {
     id: 3,
     category: "Basins",
     title: "Laundry Basin Large Size",
+    code: "MG-003",
+    status: "Available",
     image: "/images/products/basin1.jpg",
-    details: "Large basin ideal for washing clothes and home chores.",
+    details:
+      "Large basin ideal for washing clothes and home chores.",
   },
+
   {
     id: 4,
     category: "Plates",
     title: "Family Dining Plate Set",
+    code: "MG-004",
+    status: "In Stock",
     image: "/images/products/plate1.jpg",
-    details: "Lightweight plastic plates perfect for daily meals.",
+    details:
+      "Lightweight plastic plates perfect for daily meals.",
   },
+
   {
     id: 5,
     category: "Containers",
     title: "Food Storage Container",
+    code: "MG-005",
+    status: "Available",
     image: "/images/products/container1.jpg",
-    details: "Airtight container for storing food safely.",
+    details:
+      "Airtight container for storing food safely.",
   },
+
   {
     id: 6,
     category: "Flask",
-    title: "Food flask",
+    title: "Insulated Food Flask",
+    code: "MG-006",
+    status: "Bulk Ready",
     image: "/images/products/flask1.jpg",
-    details: "jsdjdndjdj.",
+    details:
+      "Insulated food flask suitable for preserving meal temperature.",
   },
 ];
 
@@ -92,7 +115,24 @@ export default function Gallery() {
     <section className="gallery-page">
       <div className="gallery-container">
 
-        <h1 className="gallery-title">Product Gallery</h1>
+        <div className="gallery-topbar">
+
+  <div>
+    <h1 className="gallery-title">
+      Product Catalog
+    </h1>
+
+    <p className="gallery-subtitle">
+      Explore our available household plastic products
+      for retail, wholesale, and commercial supply.
+    </p>
+  </div>
+
+  <div className="gallery-count">
+    {filtered.length} Products
+  </div>
+
+</div>
 
         {/* SEARCH BAR */}
         <div className="gallery-search">
@@ -141,26 +181,38 @@ filtered.map((item) => (
       />
     </div>
 
-    <div className="gallery-content">
+<div className="gallery-content">
 
-      <span className="gallery-category">
-        {item.category}
-      </span>
+  <div className="gallery-meta-top">
 
-      <h3>
-        {highlightText(item.title, search)}
-      </h3>
+    <span className="gallery-category">
+      {item.category}
+    </span>
 
-      <p>{item.details}</p>
+    <span className="product-status">
+      {item.status}
+    </span>
 
-      <button
-        className="gallery-view-btn"
-        onClick={() => setQuickView(item)}
-      >
-        View Details
-      </button>
+  </div>
 
-    </div>
+  <h3>
+    {highlightText(item.title, search)}
+  </h3>
+
+  <p>{item.details}</p>
+
+  <div className="product-code">
+    Product Code: {item.code}
+  </div>
+
+  <button
+    className="gallery-view-btn"
+    onClick={() => setQuickView(item)}
+  >
+    View Details
+  </button>
+
+</div>
 
   </div>
 ))
@@ -185,6 +237,7 @@ filtered.map((item) => (
       onClick={(e) => e.stopPropagation()}
     >
 
+      {/* LEFT IMAGE */}
       <div className="details-image">
         <img
           src={quickView.image}
@@ -192,6 +245,7 @@ filtered.map((item) => (
         />
       </div>
 
+      {/* RIGHT CONTENT */}
       <div className="details-content">
 
         <span className="details-category">
@@ -201,6 +255,24 @@ filtered.map((item) => (
         <h2>{quickView.title}</h2>
 
         <p>{quickView.details}</p>
+        <div className="details-meta">
+
+  <div className="details-meta-item">
+    <span>Product Code</span>
+    <strong>{quickView.code}</strong>
+  </div>
+
+  <div className="details-meta-item">
+    <span>Status</span>
+    <strong>{quickView.status}</strong>
+  </div>
+
+  <div className="details-meta-item">
+    <span>Category</span>
+    <strong>{quickView.category}</strong>
+  </div>
+
+</div>
 
         <div className="details-actions">
 
@@ -210,14 +282,14 @@ filtered.map((item) => (
             rel="noreferrer"
             className="details-btn primary"
           >
-            Contact Us
+            Contact on WhatsApp
           </a>
 
           <button
             className="details-btn secondary"
             onClick={() => setQuickView(null)}
           >
-            Close
+            Close Preview
           </button>
 
         </div>
