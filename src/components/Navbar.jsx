@@ -7,109 +7,110 @@ function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-<header className="enterprise-navbar">
+    <header className="enterprise-navbar">
 
-  <div className="navbar-inner">
+      <div className="navbar-inner">
 
-    {/* LEFT */}
-    <Link
-      to="/"
-      className="navbar-brand"
-      onClick={closeMenu}
-    >
-      <img
-        src="/logo.png"
-        alt="More Grace & Blessing"
-        className="brand-logo"
-      />
+        {/* BRAND */}
+        <Link
+          to="/"
+          className="navbar-brand"
+          onClick={closeMenu}
+        >
+          <img
+            src="/logo.png"
+            alt="More Grace & Blessing"
+            className="brand-logo"
+          />
 
-      <div className="brand-text">
-        <h2>
-          MORE GRACE & BLESSING
-        </h2>
+          <div className="brand-text">
+            <h2>
+              MORE GRACE & BLESSING
+              <span>NIGERIA ENTERPRISE</span>
+            </h2>
 
-        <span>
-          NIGERIA ENTERPRISE
-        </span>
+            {/* CAC UNDER NAME (FIXED STRUCTURE) */}
+            <small className="cac-label">
+              CAC REGISTERED BUSINESS
+            </small>
+          </div>
+        </Link>
 
-        <small className="cac-label">
-          CAC REGISTERED BUSINESS
-        </small>
+        {/* DESKTOP NAV */}
+        <nav className="desktop-nav">
+
+          <NavLink to="/" onClick={closeMenu}>
+            Home
+          </NavLink>
+
+          <NavLink to="/gallery" onClick={closeMenu}>
+            Gallery
+          </NavLink>
+
+          <NavLink to="/about" onClick={closeMenu}>
+            About
+          </NavLink>
+
+          <NavLink to="/contact" onClick={closeMenu}>
+            Contact
+          </NavLink>
+
+        </nav>
+
+        {/* CTA */}
+        <a
+          href="https://wa.me/2348000000000"
+          target="_blank"
+          rel="noreferrer"
+          className="navbar-cta"
+        >
+          WhatsApp Us
+        </a>
+
+        {/* MOBILE TOGGLE */}
+        <button
+          className={`menu-toggle ${menuOpen ? "active" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
       </div>
-    </Link>
 
-    {/* DESKTOP NAV */}
-    <nav className="desktop-nav">
+      {/* MOBILE MENU */}
+      <div className={`mobile-drawer ${menuOpen ? "show" : ""}`}>
 
-      <Link to="/">Home</Link>
+        <NavLink to="/" onClick={closeMenu}>
+          Home
+        </NavLink>
 
-      <Link to="/gallery">
-        Gallery
-      </Link>
+        <NavLink to="/gallery" onClick={closeMenu}>
+          Gallery
+        </NavLink>
 
-      <Link to="/about">
-        About
-      </Link>
+        <NavLink to="/about" onClick={closeMenu}>
+          About
+        </NavLink>
 
-      <Link to="/contact">
-        Contact
-      </Link>
+        <NavLink to="/contact" onClick={closeMenu}>
+          Contact
+        </NavLink>
 
-    </nav>
+        <a
+          href="https://wa.me/2348000000000"
+          target="_blank"
+          rel="noreferrer"
+          className="mobile-whatsapp"
+        >
+          Contact on WhatsApp
+        </a>
 
-    {/* RIGHT CTA */}
-    <a
-      href="https://wa.me/2348000000000"
-      target="_blank"
-      rel="noreferrer"
-      className="navbar-cta"
-    >
-      WhatsApp Us
-    </a>
+      </div>
 
-    {/* MOBILE TOGGLE */}
-    <button
-      className={`menu-toggle ${menuOpen ? "active" : ""}`}
-      onClick={() => setMenuOpen(!menuOpen)}
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-  </div>
-
-  {/* MOBILE MENU */}
-  <div className={`mobile-drawer ${menuOpen ? "show" : ""}`}>
-
-    <Link to="/" onClick={closeMenu}>
-      Home
-    </Link>
-
-    <Link to="/gallery" onClick={closeMenu}>
-      Gallery
-    </Link>
-
-    <Link to="/about" onClick={closeMenu}>
-      About
-    </Link>
-
-    <Link to="/contact" onClick={closeMenu}>
-      Contact
-    </Link>
-
-    <a
-      href="https://wa.me/2348000000000"
-      target="_blank"
-      rel="noreferrer"
-      className="mobile-whatsapp"
-    >
-      Contact on WhatsApp
-    </a>
-
-  </div>
-
-</header>
+    </header>
   );
 }
 

@@ -1,108 +1,143 @@
-import React from "react";
-import { useEffect } from "react";
-import bucketImg from "../assets/images/bucket.jpg";
-import bowlsImg from "../assets/images/bowls.jpg";
+import React, { useEffect } from "react";
+import aboutImg from "../assets/images/hero-plastic.jpg";
 
-function About() {
-    useEffect(() => {
-  document.title = "About Us | More Grace & Blessing Nigeria Enterprise";
-}, []);
-  const values = [
-    {
-      title: "Quality Products",
-      text: "We focus on supplying durable and practical household plastic products customers can rely on every day.",
-    },
-    {
-      title: "Customer Trust",
-      text: "We believe in building long-term relationships through honest service, dependable supply, and consistency.",
-    },
-    {
-      title: "Business Support",
-      text: "We serve both individual buyers and bulk customers with flexible supply support and responsive communication.",
-    },
-    {
-      title: "Affordable Value",
-      text: "Our goal is to provide quality products at practical prices that work for homes, shops, and resellers.",
-    },
-  ];
+export default function About() {
+
+  useEffect(() => {
+    document.title =
+      "About | More Grace & Blessing Nigeria Enterprise";
+  }, []);
 
   return (
     <section className="about-page">
+
       {/* HERO */}
-      <div className="about-hero reveal">
+
+      <div className="about-hero">
+
         <div className="about-hero-text">
-          <span>About Our Business</span>
-          <h1>Built on Practical Products, Honest Service & Reliable Supply</h1>
+
+          <span className="about-tag">
+            About Our Company
+          </span>
+
+          <h1>
+            Trusted Household Plastic Product Supplier
+            in Nigeria
+          </h1>
+
           <p>
-            MORE GRACE & BLESSING NIGERIA ENTERPRISE is committed to supplying
-            quality household plastic products that serve everyday needs for
-            homes, retailers, resellers, and bulk buyers.
+            MORE GRACE & BLESSING NIGERIA ENTERPRISE
+            is committed to supplying practical,
+            durable, and affordable household plastic
+            products for homes, retailers, resellers,
+            and wholesale buyers.
           </p>
+
         </div>
 
         <div className="about-hero-image">
-          <img src={bucketImg} alt="Plastic products business" />
+          <img src={aboutImg} alt="About Company" />
         </div>
+
       </div>
 
       {/* STORY */}
-      <div className="about-story-section reveal">
+
+      <div className="about-story">
+
         <div className="about-story-card">
-          <span>Who We Are</span>
-          <h2>A Business Focused on Everyday Utility</h2>
+
+          <h2>Who We Are</h2>
+
           <p>
-            Our business is built around supplying useful household plastic
-            products that customers genuinely need — from buckets and bowls to
-            plates, basins, containers, and more.
+            We are a Nigerian enterprise focused on
+            delivering reliable household plastic
+            products that support everyday living,
+            retail businesses, and commercial supply needs.
           </p>
+
           <p>
-            We understand that customers are not just looking for products —
-            they are looking for durability, affordability, and a supplier they
-            can trust consistently.
+            Our business is built on consistency,
+            customer satisfaction, dependable supply,
+            and practical value for buyers.
           </p>
+
         </div>
 
-        <div className="about-story-image">
-          <img src={bowlsImg} alt="Household plastic products" />
+        <div className="about-story-card">
+
+          <h2>What We Supply</h2>
+
+          <ul>
+
+            <li>Buckets & Basins</li>
+
+            <li>Plastic Plates & Bowls</li>
+
+            <li>Storage Containers</li>
+
+            <li>Kitchen Utensils</li>
+
+            <li>Household Essentials</li>
+
+          </ul>
+
         </div>
+
       </div>
 
       {/* VALUES */}
-      <div className="about-values-section reveal">
-        <div className="section-header">
-          <span>What We Stand For</span>
-          <h2>The Values Behind Our Business</h2>
+
+      <div className="about-values">
+
+        <div className="value-card">
+          <h3>Quality</h3>
           <p>
-            Everything we do is guided by reliability, usefulness, and service
-            that makes buying easier for customers.
+            Durable products designed for everyday use.
           </p>
         </div>
 
-        <div className="about-values-grid">
-          {values.map((value, index) => (
-            <div className="about-value-card" key={index}>
-              <div className="value-icon">{index + 1}</div>
-              <h3>{value.title}</h3>
-              <p>{value.text}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* MISSION */}
-      <div className="about-mission-section reveal">
-        <div className="about-mission-box">
-          <span>Our Mission</span>
-          <h2>To Deliver Everyday Plastic Products with Reliability and Value</h2>
+        <div className="value-card">
+          <h3>Reliability</h3>
           <p>
-            Our mission is simple: to make quality household plastic products
-            easily available to customers while maintaining dependable service,
-            fair pricing, and long-term trust.
+            Consistent service and dependable supply support.
           </p>
         </div>
+
+        <div className="value-card">
+          <h3>Business Friendly</h3>
+          <p>
+            Supporting retailers, resellers, and bulk buyers.
+          </p>
+        </div>
+
       </div>
+
+      {/* CTA */}
+
+      <div className="about-cta">
+
+        <h2>
+          Looking for Reliable Plastic Product Supply?
+        </h2>
+
+        <p>
+          Contact us today for product inquiries,
+          wholesale supply, and business orders.
+        </p>
+
+        <a
+          href="https://wa.me/2348000000000"
+          target="_blank"
+          rel="noreferrer"
+          className="about-btn"
+        >
+          Contact on WhatsApp
+        </a>
+
+      </div>
+
     </section>
   );
 }
-
-export default About;
