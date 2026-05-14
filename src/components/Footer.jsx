@@ -36,9 +36,15 @@ function Footer() {
         products for homes, retailers, and wholesale buyers.
       </p>
 
-      <small className="footer-cac">
-        CAC REGISTERED BUSINESS
-      </small>
+      <div className="footer-cac-badge">
+
+  <FaCheckCircle />
+
+  <span>
+    CAC VERIFIED BUSINESS
+  </span>
+
+</div>
 
     </div>
 
@@ -98,25 +104,45 @@ function Footer() {
         info@moregrace.com
       </a>
 
-      <div className="footer-socials">
+     <div className="footer-socials">
 
-        <a
-          href="https://facebook.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Facebook
-        </a>
+  <a
+    href="https://facebook.com"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="Facebook"
+  >
+    <>
+  <FaFacebookF />
+  <span>Facebook</span>
+</>
+  </a>
 
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Instagram
-        </a>
+  <a
+    href="https://instagram.com"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="Instagram"
+  >
+    <>
+  <FaInstagram />
+  <span>Instagram</span>
+</>
+  </a>
 
-      </div>
+  <a
+    href="https://wa.me/2348026312854"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="WhatsApp"
+  >
+    <>
+  <FaWhatsapp />
+  <span>WhatsApp</span>
+</>
+  </a>
+
+</div>
 
     </div>
 
