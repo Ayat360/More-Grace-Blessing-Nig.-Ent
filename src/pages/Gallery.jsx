@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const categories = ["Buckets", "Basins", "Plates", "Containers", "Flask"];
+const categories = ["Buckets", "Basins", "Plates", "Containers", "Flask", "chairs"];
 
 const galleryData = [
   {
@@ -39,7 +39,7 @@ const galleryData = [
   {
     id: 4,
     category: "Plates",
-    title: "Family Dining Plate Set",
+    title: "Small Plate Set",
     code: "MG-004",
     status: "In Stock",
     image: "/images/products/plate1.jpg",
@@ -61,12 +61,89 @@ const galleryData = [
   {
     id: 6,
     category: "Flask",
-    title: "Insulated Food Flask",
+    title: "Insulated Water Flask",
     code: "MG-006",
-    status: "Bulk Ready",
+    status: "Bulk Ready for Supply Only",
     image: "/images/products/flask1.jpg",
     details:
+      "Insulated Water flask.",
+  },
+
+   {
+    id: 7,
+    category: "Flask",
+    title: "Insulated Food Flask",
+    code: "MG-007",
+    status: "Bulk Ready for Supply Only",
+    image: "/images/products/flask2.jpg",
+    details:
       "Insulated food flask suitable for preserving meal temperature.",
+  },
+
+   {
+    id: 8,
+    category: "Flask",
+    title: "Insulated Water Flask",
+    code: "MG-008",
+    status: "Bulk Ready for Supply Only",
+    image: "/images/products/flask3.jpg",
+    details:
+      "Insulated Office Water flask.",
+  },
+
+   {
+    id: 9,
+    category: "Flask",
+    title: "Insulated Food Flask",
+    code: "MG-009",
+    status: "Bulk Ready for Supply Only",
+    image: "/images/products/flask4.jpg",
+    details:
+      "Insulated food flask suitable for preserving meal temperature.",
+  },
+
+   {
+    id: 10,
+    category: "Flask",
+    title: "Insulated Food Flask",
+    code: "MG-010",
+    status: "Bulk Ready for Supply Only",
+    image: "/images/products/flask5.jpg",
+    details:
+      "Insulated Water flask.",
+  },
+
+  {
+    id: 11,
+    category: "Plates",
+    title: "Family Dining Plate Set",
+    code: "MG-011",
+    status: "In Stock",
+    image: "/images/products/plate2.jpg",
+    details:
+      "Lightweight plastic plates perfect for daily meals.",
+  },
+
+  {
+    id: 12,
+    category: "Plates",
+    title: "Family Dining Plate Set",
+    code: "MG-012",
+    status: "In Stock",
+    image: "/images/products/plate3.jpg",
+    details:
+      "Lightweight plastic plates perfect for daily meals.",
+  },
+
+  {
+    id: 13,
+    category: "Plates",
+    title: "Unbreakable Plate Set",
+    code: "MG-013",
+    status: "In Stock",
+    image: "/images/products/plate4.jpg",
+    details:
+      "Lightweight plastic plates perfect for daily meals.",
   },
 ];
 
@@ -277,7 +354,7 @@ filtered.map((item) => (
         <div className="details-actions">
 
           <a
-            href="https://wa.me/2348000000000"
+            href="https://wa.me/2348026312854"
             target="_blank"
             rel="noreferrer"
             className="details-btn primary"
