@@ -62,7 +62,7 @@ useEffect(() => {
             <div className="contact-icon">📞</div>
             <div>
               <h3>Call or WhatsApp</h3>
-              <p>+234 800 000 0000</p>
+              <p>+234 802 631 2854</p>
             </div>
           </div>
 
@@ -70,7 +70,7 @@ useEffect(() => {
             <div className="contact-icon">✉️</div>
             <div>
               <h3>Email Address</h3>
-              <p>yourbusiness@email.com</p>
+              <p>aregbeakeemadekunle@gmail.com</p>
             </div>
           </div>
 
@@ -83,7 +83,7 @@ useEffect(() => {
           </div>
 
           <a
-            href="https://wa.me/2348000000000"
+            href="https://wa.me/2348026312854"
             target="_blank"
             rel="noreferrer"
             className="contact-whatsapp-big"
