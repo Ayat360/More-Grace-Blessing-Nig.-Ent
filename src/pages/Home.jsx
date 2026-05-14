@@ -161,12 +161,12 @@ const faqs = [
       </p>
 
       <div className="premium-hero-buttons">
-        <a href="/products" className="hero-primary-btn">
+        <a href="/gallery" className="hero-primary-btn">
           Explore Products
         </a>
 
         <a
-          href="https://wa.me/2348000000000"
+          href="https://wa.me/2348026312854"
           target="_blank"
           rel="noreferrer"
           className="hero-secondary-btn"
