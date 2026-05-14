@@ -1,6 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaWhatsapp,
+  FaCheckCircle,
+} from "react-icons/fa";
 
 function Footer() {
   return (

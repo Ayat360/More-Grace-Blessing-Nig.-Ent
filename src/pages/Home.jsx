@@ -145,7 +145,7 @@ const faqs = [
 <section className="premium-hero">
   <div className="premium-hero-content">
     {/* LEFT SIDE */}
-    <div className="premium-hero-text reveal-left">
+    <div className="premium-hero-text">
       <span className="hero-tag">Trusted Household Plastic Supplier</span>
 
       <h1>
@@ -183,7 +183,7 @@ const faqs = [
     </div>
 
     {/* RIGHT SIDE */}
-    <div className="premium-hero-visual reveal-right">
+    <div className="premium-hero-visual">
       <div className="hero-main-card">
         <img
           src={heroImg}
@@ -191,13 +191,13 @@ const faqs = [
         />
       </div>
 
-      <div className="hero-floating-card bottom-card">
+      <div className="hero-floating-card top-card">
         <span>Top Category</span>
         <h4>Household Utility</h4>
         <p>Buckets, Basins & Everyday Essentials</p>
       </div>
 
-      <div className="hero-floating-card bottom-card reveal-zoom">
+      <div className="hero-floating-card bottom-card">
         <span>Business Ready</span>
         <h4>Bulk Orders Supported</h4>
         <p>Reliable supply for homes, retailers, and resellers</p>

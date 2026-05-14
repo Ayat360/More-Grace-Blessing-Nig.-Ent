@@ -171,6 +171,35 @@ useEffect(() => {
           </form>
         </div>
       </div>
+
+      {/* LOCATION MAP */}
+<div className="contact-map-section reveal">
+
+  <div className="map-text">
+    <span>Visit Our Location</span>
+
+    <h2>
+      Find MORE GRACE & BLESSING
+      NIGERIA ENTERPRISE
+    </h2>
+
+    <p>
+      Customers, retailers, and wholesale buyers can easily locate
+      our business for enquiries, supply discussions, and product inspection.
+    </p>
+  </div>
+
+  <div className="map-wrapper">
+    <iframe
+      title="Business Location"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.7756224615223!2d3.255301075374894!3d6.549988993442995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8547886c08c5%3A0x1dfc3716c1517dc5!2sMORE%20GRACE%20%26%20BLESSING%20NIGERIA%20ENTERPRISE!5e0!3m2!1sen!2sng!4v1778768245680!5m2!1sen!2sng"
+      loading="lazy"
+      allowFullScreen=""
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
+</div>
     </section>
   );
 }
