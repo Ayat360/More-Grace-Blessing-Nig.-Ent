@@ -342,65 +342,6 @@ body {
   }
 }
 
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .page h1 {
-    font-size: 2rem;
-  }
-}
-/* =========================
-   HOME PAGE PROFESSIONAL UI
-========================= */
-
-.home-page {
-  width: 100%;
-}
-
-/* SECTION HEADER */
-.section-header {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 50px;
-}
-
-.section-header span {
-  display: inline-block;
-  color: #0d3b66;
-  font-weight: 700;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 12px;
-}
-
-.section-header h2 {
-  font-size: 2.4rem;
-  color: #0d3b66;
-  margin-bottom: 15px;
-}
-
-.section-header p {
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.8;
-}
-
 /* HERO SECTION */
 .hero-section {
   display: flex;
@@ -2301,245 +2242,6 @@ body {
 }
 
 /* =========================
-   NAVBAR FIX
-========================= */
-
-.navbar {
-  padding: 16px 6% !important;
-}
-
-.logo-text h2 {
-  font-size: 1rem !important;
-}
-
-.logo-text span {
-  font-size: 0.72rem !important;
-}
-
-.nav-links a {
-  font-size: 0.95rem !important;
-}
-
-/* =========================
-   DESKTOP LARGE SCREENS
-========================= */
-
-@media (min-width: 1200px) {
-  .hero-section,
-  .featured-section,
-  .why-section,
-  .business-section,
-  .categories-section,
-  .testimonial-section,
-  .faq-section,
-  .cta-section {
-    padding-left: 6%;
-    padding-right: 6%;
-  }
-}
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 992px) {
-  .hero-section,
-  .featured-section,
-  .why-section,
-  .business-section,
-  .categories-section,
-  .testimonial-section,
-  .faq-section,
-  .cta-section,
-  .contact-page,
-  .products-page,
-  .about-page {
-    padding-top: 64px !important;
-    padding-bottom: 64px !important;
-    padding-left: 6% !important;
-    padding-right: 6% !important;
-  }
-
-  .hero-section,
-  .business-content,
-  .contact-wrapper {
-    flex-direction: column !important;
-  }
-
-  .hero-text,
-  .hero-image,
-  .business-text,
-  .business-image {
-    width: 100%;
-  }
-
-  .hero-text h1 {
-    font-size: clamp(2rem, 6vw, 3.2rem) !important;
-  }
-
-  .curve-slide {
-    flex: 0 0 230px !important;
-  }
-
-  .curve-slide-inner {
-    height: 290px !important;
-  }
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-  .navbar {
-    padding: 14px 5% !important;
-    flex-wrap: wrap;
-    gap: 14px;
-  }
-
-  .nav-links {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 14px !important;
-  }
-
-  .hero-section,
-  .featured-section,
-  .why-section,
-  .business-section,
-  .categories-section,
-  .testimonial-section,
-  .faq-section,
-  .cta-section,
-  .contact-page,
-  .products-page,
-  .about-page {
-    padding-top: 56px !important;
-    padding-bottom: 56px !important;
-    padding-left: 5% !important;
-    padding-right: 5% !important;
-  }
-
-  .hero-text h1 {
-    font-size: 2rem !important;
-    line-height: 1.12 !important;
-  }
-
-  .page-hero h1,
-  .section-header h2,
-  .business-text h2,
-  .cta-box h2 {
-    font-size: 1.6rem !important;
-  }
-
-  .hero-text p,
-  .page-hero p,
-  .section-header p,
-  .business-text p,
-  .cta-box p,
-  .product-card-content p,
-  .why-card p,
-  .testimonial-text,
-  .faq-card p,
-  .contact-info-card p {
-    font-size: 0.94rem !important;
-    line-height: 1.75 !important;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .hero-image img {
-    max-width: 100% !important;
-    max-height: 320px !important;
-    border-radius: 22px !important;
-  }
-
-  .product-card img {
-    height: 190px !important;
-  }
-
-  .curve-carousel {
-    padding: 12px 6px !important;
-    gap: 14px !important;
-  }
-
-  .curve-slide {
-    flex: 0 0 200px !important;
-  }
-
-  .curve-slide-inner {
-    height: 250px !important;
-    border-radius: 24px !important;
-    transform: scale(0.98) rotate(0deg) !important;
-    opacity: 1 !important;
-  }
-
-  .curve-slide-overlay h3 {
-    font-size: 1rem !important;
-  }
-
-  .curve-arrow {
-    display: none !important;
-  }
-
-  .cta-box {
-    padding: 30px 20px !important;
-  }
-
-  .product-card,
-  .why-card,
-  .stat-card,
-  .testimonial-card,
-  .faq-card,
-  .contact-info-card,
-  .contact-form-card {
-    padding: 20px !important;
-    border-radius: 18px !important;
-  }
-
-  .scroll-top-btn,
-  .whatsapp-float {
-    transform: scale(0.92);
-  }
-}
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 1.75rem !important;
-  }
-
-  .page-hero h1,
-  .section-header h2,
-  .business-text h2,
-  .cta-box h2 {
-    font-size: 1.45rem !important;
-  }
-
-  .curve-slide {
-    flex: 0 0 180px !important;
-  }
-
-  .curve-slide-inner {
-    height: 220px !important;
-  }
-
-  .logo-text h2 {
-    font-size: 0.9rem !important;
-  }
-
-  .logo-text span {
-    font-size: 0.66rem !important;
-  }
-}
-/* =========================
    MODERN TESTIMONIAL REDESIGN
 ========================= */
 
@@ -3633,7 +3335,7 @@ body {
   margin-bottom: 16px;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 992px) {
   .product-modal-card {
     grid-template-columns: 1fr;
@@ -3650,7 +3352,7 @@ body {
   .products-filter-wrap {
     margin-bottom: 28px;
   }
-
+/* RESPONSIVE */
   .products-filters {
     gap: 10px;
   }
@@ -3929,39 +3631,7 @@ a:hover,
     transform: none !important;
   }
 }
-/* =========================
-   NAVBAR ACTIVE LINK
-========================= */
 
-.nav-link {
-  position: relative;
-  text-decoration: none;
-  color: #0d3b66;
-  font-weight: 600;
-  padding: 6px 0;
-}
-
-/* Active link */
-.nav-link.active {
-  color: #25d366;
-}
-
-/* Underline animation */
-.nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background: #25d366;
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 100%;
-}
 /* =========================
    SCROLL TO TOP BUTTON
 ========================= */
@@ -4373,84 +4043,6 @@ a:hover,
   text-decoration: none;
 }
 
-/* IMAGE LOGO */
-.navbar-logo {
-  height: 45px;
-  width: auto;
-  object-fit: contain;
-}
-
-/* TEXT BLOCK */
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-/* MAIN BRAND NAME */
-.brand-name {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #0d3b66;
-  margin: 0;
-}
-
-/* SUB TEXT */
-.brand-sub {
-  font-size: 0.75rem;
-  color: #555;
-  letter-spacing: 1px;
-}
-
-/* CAC BADGE */
-.cac-badge {
-  margin-left: 10px;
-  font-size: 0.65rem;
-  padding: 4px 10px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #0d3b66, #25d366);
-  color: white;
-  font-weight: 500;
-}
-@media (max-width: 768px) {
-  .cac-badge {
-    display: inline-block;
-    font-size: 0.6rem;
-    padding: 3px 8px;
-    margin-left: 8px;
-  }
-
-  .navbar-logo {
-    height: 38px;
-  }
-
-  .brand-name {
-    font-size: 0.85rem;
-  }
-
-  .brand-sub {
-    font-size: 0.65rem;
-  }
-}
-/* CAC UNDER TEXT STYLE */
-.cac-badge.under {
-  display: inline-block;
-  margin-top: 4px;
-  font-size: 0.65rem;
-  padding: 3px 10px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #0d3b66, #25d366);
-  color: white;
-  font-weight: 500;
-  width: fit-content;
-}
-@media (max-width: 768px) {
-  .cac-badge.under {
-    font-size: 0.6rem;
-    padding: 3px 8px;
-    margin-top: 3px;
-  }
-}
 /* =========================
    FINAL BOSS MARQUEE SYSTEM
 ========================= */
@@ -5565,127 +5157,6 @@ a:hover,
     padding-top: 24px;
   }
 }
-/* =========================
-   ENTERPRISE NAVBAR V2
-========================= */
-
-.modern-navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #0f172a;
-  z-index: 999;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
-
-.navbar-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 14px 20px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* LOGO */
-
-.navbar-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: white;
-}
-
-.logo-img {
-  width: 45px;
-  height: 45px;
-  object-fit: contain;
-}
-
-.logo-text h2 {
-  font-size: 0.95rem;
-  margin: 0;
-  line-height: 1.2;
-}
-
-.logo-text span {
-  display: block;
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.65);
-}
-
-/* CAC UNDER TEXT (KEY FIX) */
-
-.cac-text {
-  display: block;
-  font-size: 0.65rem;
-  color: #22c55e;
-  margin-top: 3px;
-  letter-spacing: 1px;
-}
-
-/* DESKTOP LINKS */
-
-.nav-links {
-  display: flex;
-  gap: 25px;
-}
-
-.nav-links a {
-  color: rgba(255,255,255,0.75);
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: white;
-}
-
-/* MOBILE MENU */
-
-.hamburger {
-  display: none;
-  font-size: 1.6rem;
-  color: white;
-  cursor: pointer;
-}
-
-/* MOBILE PANEL */
-
-@media (max-width: 768px) {
-
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 65px;
-    right: 0;
-    width: 100%;
-    background: #0f172a;
-
-    flex-direction: column;
-    padding: 20px;
-    display: none;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-}
-/* FORCE DESKTOP NAV STATE ON WIDER LAYOUTS */
-.desktop-nav {
-  display: flex;
-}
-
-/* HIDE MOBILE MENU BY DEFAULT */
-.mobile-drawer {
-  display: none;
-}
 
 /* HAMBURGER DEFAULT (ONLY MOBILE REAL WIDTH) */
 .menu-toggle {
@@ -5707,96 +5178,271 @@ a:hover,
     display: flex;
   }
 }
-/* PREVENT FAKE MOBILE TRIGGERING DESKTOP UI */
-@media (hover: none) and (pointer: coarse) {
-  .menu-toggle {
-    display: flex;
-  }
+/* ========================================
+   ENTERPRISE NAVBAR FINAL SYSTEM
+======================================== */
 
-  .desktop-nav {
-    display: none;
-  }
-}
 .enterprise-navbar {
   position: sticky;
   top: 0;
-  z-index: 1000;
-  background: #0b1220;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  z-index: 5000;
+  width: 100%;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .navbar-inner {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: auto;
-  padding: 14px 20px;
+
+  height: 82px;
+  padding: 0 5%;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
+/* BRAND */
+
 .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .brand-logo {
-  width: 44px;
-  height: 44px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
 }
 
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
 .brand-text h2 {
-  font-size: 0.9rem;
-  color: white;
+  font-size: 0.95rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #111827;
   margin: 0;
-  line-height: 1.2;
 }
 
 .brand-text span {
-  display: block;
-  font-size: 0.7rem;
-  color: rgba(255,255,255,0.6);
+  font-size: 0.72rem;
+  color: #6b7280;
+  letter-spacing: 1px;
+  margin-top: 3px;
 }
 
 .cac-label {
-  display: block;
-  font-size: 0.62rem;
-  margin-top: 3px;
-  color: #22c55e;
+  margin-top: 5px;
+  font-size: 0.63rem;
+  color: #15803d;
+  font-weight: 700;
   letter-spacing: 1px;
 }
-.navbar-brand {
+
+/* DESKTOP NAV */
+
+.desktop-nav {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 34px;
+}
+
+.desktop-nav a {
+  position: relative;
+
   text-decoration: none;
+  color: #374151;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  transition: 0.25s ease;
 }
 
-.brand-logo {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
+.desktop-nav a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+
+  width: 0%;
+  height: 2px;
+
+  background: #15803d;
+
+  transition: 0.3s ease;
 }
 
-.brand-text h2 {
-  font-size: 0.9rem;
+.desktop-nav a:hover {
+  color: #111827;
+}
+
+.desktop-nav a:hover::after {
+  width: 100%;
+}
+
+/* CTA */
+
+.navbar-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 46px;
+  padding: 0 22px;
+
+  background: #111827;
   color: white;
-  margin: 0;
-  line-height: 1.2;
+
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  border-radius: 12px;
+
+  transition: 0.3s ease;
 }
 
-.brand-text span {
-  display: block;
-  font-size: 0.7rem;
-  color: rgba(255,255,255,0.6);
+.navbar-cta:hover {
+  background: #15803d;
+  transform: translateY(-2px);
 }
 
-.cac-label {
-  display: block;
-  font-size: 0.62rem;
-  margin-top: 3px;
-  color: #22c55e;
-  letter-spacing: 1px;
+/* HAMBURGER */
+
+.menu-toggle {
+  display: none;
+
+  width: 48px;
+  height: 48px;
+
+  border: none;
+  background: transparent;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 24px;
+  height: 2px;
+
+  background: #111827;
+
+  transition: 0.3s ease;
+}
+
+/* MOBILE DRAWER */
+
+.mobile-drawer {
+  display: none;
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media screen and (max-width: 768px) {
+
+  .navbar-inner {
+    height: 74px;
+    padding: 0 18px;
+  }
+
+  .desktop-nav,
+  .navbar-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .brand-logo {
+    width: 46px;
+    height: 46px;
+  }
+
+  .brand-text h2 {
+    font-size: 0.8rem;
+  }
+
+  .brand-text span {
+    font-size: 0.63rem;
+  }
+
+  .cac-label {
+    font-size: 0.55rem;
+  }
+
+  .mobile-drawer {
+    display: flex;
+    flex-direction: column;
+
+    background: white;
+
+    border-top: 1px solid #e5e7eb;
+
+    overflow: hidden;
+
+    max-height: 0;
+    opacity: 0;
+
+    transition:
+      max-height 0.4s ease,
+      opacity 0.3s ease,
+      padding 0.3s ease;
+
+    padding: 0 20px;
+  }
+
+  .mobile-drawer.show {
+    max-height: 500px;
+    opacity: 1;
+    padding: 24px 20px;
+  }
+
+  .mobile-drawer a {
+    text-decoration: none;
+
+    color: #111827;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  .mobile-whatsapp {
+    margin-top: 18px;
+
+    background: #15803d;
+    color: white !important;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 50px;
+    border: none;
+  }
 }
