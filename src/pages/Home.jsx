@@ -1133,6 +1133,8 @@ const faqs = [
       <p>
         Real comments from customers and business buyers who trust our products and services.
       </p>
+      <p  style ={{ color: 'red', fontStyle: 'italic' }} ><i>please if you have any feedback, please let us know!
+        and it takes 50s for it to send</i></p>
 
     </div>
 
