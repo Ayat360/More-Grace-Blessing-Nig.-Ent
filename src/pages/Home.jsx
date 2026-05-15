@@ -103,7 +103,7 @@ const handleReviewSubmit = async (e) => {
   if (!reviewForm.name || !reviewForm.text) return;
 
   try {
-    const response = await fetch("http://127.0.0.1:5000/reviews", {
+    const response = await fetch("https://more-grace-blessing-nig-ent.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
