@@ -59,7 +59,7 @@ function Navbar() {
 
         {/* CTA */}
         <a
-          href="https://wa.me/2348000000000"
+          href="https://wa.me/2348026312854"
           target="_blank"
           rel="noreferrer"
           className="navbar-cta"
