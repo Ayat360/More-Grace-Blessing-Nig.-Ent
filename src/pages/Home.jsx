@@ -108,12 +108,23 @@ const handleReviewSubmit = async (e) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(reviewForm),
+      body: JSON.stringify({
+        name: reviewForm.name,
+        text: reviewForm.text,
+      }),
     });
 
     const data = await response.json();
+console.log(data);
 
-    setReviews([data, ...reviews]);
+    setReviews((prev) => [
+      {
+        id: Date.now(),
+        name: reviewForm.name,
+        text: reviewForm.text,
+      },
+      ...prev,
+    ]);
 
     setReviewForm({
       name: "",
@@ -1004,35 +1015,30 @@ const faqs = [
   
     <div className="testimonial-modern-grid">
   
-      {testimonials.map((item, index) => (
-  
-        <div className="testimonial-modern-card" key={index}>
-  
-          <div className="quote-mark">“</div>
-  
-          <p className="testimonial-modern-text">{item.text}</p>
-  
-          <div className="testimonial-user">
-  
-            <div className="testimonial-avatar">
-  
-              {item.name.charAt(0)}
-  
-            </div>
-  
-            <div>
-  
-              <h4>{item.name}</h4>
-  
-              <span>{item.role}</span>
-  
-            </div>
-  
-          </div>
-  
-        </div>
-  
-      ))}
+{reviews.map((review, index) => (
+  <div className="review-card" key={index}>
+    
+    <div className="quote-mark">“</div>
+
+    <p className="testimonial-modern-text">
+      {review.text}
+    </p>
+
+    <div className="testimonial-user">
+      
+      <div className="testimonial-avatar">
+        {review.name.charAt(0)}
+      </div>
+
+      <div>
+        <h4>{review.name}</h4>
+        <span>Verified Customer</span>
+      </div>
+
+    </div>
+
+  </div>
+))}
   
     </div>
   
