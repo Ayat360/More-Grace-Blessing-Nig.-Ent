@@ -35,10 +35,12 @@ def get_reviews():
 
     for row in rows:
         reviews.append({
-            "id": row[0],
-            "name": row[1],
-            "message": row[2]
-        })
+"id": row[0],
+"name": row[1],
+"role": row[2],
+"message": row[3]
+})
+
 
     return jsonify(reviews)
 
