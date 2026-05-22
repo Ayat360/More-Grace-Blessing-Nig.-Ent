@@ -19,11 +19,8 @@ import heroImg from "../assets/images/hero-plastic.jpg";
 
   
 // =========================
-  
 // COUNT UP HOOK (ADD HERE)
-  
-// =========================
-  
+// ========================= 
 const useCountUp = (end, duration = 1500, trigger = true) => {
   
   const [count, setCount] = useState(0);
@@ -83,66 +80,89 @@ function Home() {
     const [reviews, setReviews] = useState([
   {
     name: "Aisha M.",
-    text: "Very durable products. Delivery was fast and professional.",
+    message: "Very durable products. Delivery was fast and professional.",
   },
 
   {
     name: "Kunle A.",
-    text: "Best plastic supplier I’ve worked with in Lagos honestly.",
+    message: "Best plastic supplier I’ve worked with in Lagos honestly.",
   },
 ]);
 
 const [reviewForm, setReviewForm] = useState({
   name: "",
-  text: "",
+  message: "",
 });
 
 const handleReviewSubmit = async (e) => {
   e.preventDefault();
 
-  if (!reviewForm.name || !reviewForm.text) return;
+  console.log("🔥 Submit clicked");
+  console.log(reviewForm);
+
+  if (!reviewForm.name || !reviewForm.message) return;
 
   try {
-    const response = await fetch("https://more-grace-blessing-nig-ent.onrender.com/reviews", {
+    const response = await fetch(TABLE_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        apikey: SUPABASE_ANON_KEY,
+        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+        Prefer: "return=representation",
       },
       body: JSON.stringify({
         name: reviewForm.name,
-        text: reviewForm.text,
+        message: reviewForm.message,
       }),
     });
 
     const data = await response.json();
-console.log(data);
 
-    setReviews((prev) => [
-      {
-        id: Date.now(),
-        name: reviewForm.name,
-        text: reviewForm.text,
-      },
-      ...prev,
-    ]);
+    console.log("📦 Supabase response:", data);
+    console.log("Status:", response.status);
+
+    if (!response.ok) {
+      throw new Error("Insert failed");
+    }
+
+    const newReview = data?.[0];
+
+    setReviews((prev) => [newReview, ...prev]);
 
     setReviewForm({
       name: "",
-      text: "",
+      message: "",
     });
 
   } catch (error) {
-    console.log(error);
+    console.log("❌ Submit error:", error.message);
   }
 };
 
 useEffect(() => {
-  fetch("http://127.0.0.1:5000/reviews")
-    .then((res) => res.json())
-    .then((data) => setReviews(data))
-    .catch((err) => console.log(err));
+  const fetchReviews = async () => {
+    try {
+      const res = await fetch(
+        `${TABLE_URL}?select=*&order=id.desc`,
+        {
+          headers: {
+            apikey: SUPABASE_ANON_KEY,
+            Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+          },
+        }
+      );
+
+      const data = await res.json();
+      setReviews(data);
+    } catch (err) {
+      console.log("Fetch error:", err);
+    }
+  };
+
+  fetchReviews();
 }, []);
-  
+
     useEffect(() => {
   
   const handleScroll = () => {
@@ -244,58 +264,6 @@ const categories = [
   },
   
 ];
-  
-
-  
-  const trustStats = [
-  
-    { number: "100+", label: "Products Supplied" },
-  
-    { number: "50+", label: "Happy Buyers" },
-  
-    { number: "Bulk", label: "Retail & Wholesale Orders" },
-  
-    { number: "Reliable", label: "Business Service" },
-  
-  ];
-  
-  
-  
-const testimonials = [
-  
-  {
-  
-    name: "Retail Buyer",
-  
-    role: "Store Reseller",
-  
-    text: "Their products are strong, neat, and easy to resell. Delivery and communication were smooth.",
-  
-  },
-  
-  {
-  
-    name: "Household Customer",
-  
-    role: "Home Buyer",
-  
-    text: "We bought bowls and buckets and the quality was honestly better than what we expected.",
-  
-  },
-  
-  {
-  
-    name: "Business Customer",
-  
-    role: "Bulk Supply Client",
-  
-    text: "A reliable supplier for practical plastic products. Good for repeat orders and business use.",
-  
-  },
-  
-];
-  
-
   
 const faqs = [
   
@@ -1021,7 +989,7 @@ const faqs = [
     <div className="quote-mark">“</div>
 
     <p className="testimonial-modern-text">
-      {review.text}
+      {review.message || review.text}
     </p>
 
     <div className="testimonial-user">
@@ -1112,107 +1080,6 @@ const faqs = [
   
   </div>
   
-</section>
-  
-{/* CUSTOMER REVIEWS */}
-
-<section className="customer-feedback-section reveal section-divider">
-
-  <div className="feedback-top">
-
-    <div className="feedback-intro">
-
-      <span>
-        CUSTOMER FEEDBACK
-      </span>
-
-      <h2>
-        What Customers Say About Us
-      </h2>
-
-      <p>
-        Real comments from customers and business buyers who trust our products and services.
-      </p>
-      <p  style ={{ color: 'red', fontStyle: 'italic' }} ><i>please if you have any feedback, please let us know!
-        and it takes 50s for it to send</i></p>
-
-    </div>
-
-    <form
-      className="feedback-form"
-      onSubmit={handleReviewSubmit}
-    >
-
-      <input
-        type="text"
-        placeholder="Your Name"
-        value={reviewForm.name}
-        onChange={(e) =>
-          setReviewForm({
-            ...reviewForm,
-            name: e.target.value,
-          })
-        }
-      />
-
-      <textarea
-        placeholder="Write your feedback..."
-        rows="5"
-        value={reviewForm.text}
-        onChange={(e) =>
-          setReviewForm({
-            ...reviewForm,
-            text: e.target.value,
-          })
-        }
-      ></textarea>
-
-      <button type="submit">
-        Submit Review
-      </button>
-
-    </form>
-
-  </div>
-
-  <div className="feedback-grid">
-
-    {reviews.map((review, index) => (
-
-      <div className="feedback-card" key={index}>
-
-        <div className="feedback-stars">
-          ⭐ ⭐ ⭐ ⭐ ⭐
-        </div>
-
-        <p>
-          {review.text}
-        </p>
-
-        <div className="feedback-user">
-
-          <div className="feedback-avatar">
-            {review.name.charAt(0)}
-          </div>
-
-          <div>
-            <h4>
-              {review.name}
-            </h4>
-
-            <span>
-              Verified Customer
-            </span>
-          </div>
-
-        </div>
-
-      </div>
-
-    ))}
-
-  </div>
-
 </section>
   
       {/* CTA SECTION */}

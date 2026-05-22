@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const categories = ["Buckets", "Basins", "Plates", "Containers", "Flask", "chairs"];
+const categories = ["Buckets", "Basins", "Plates", "Containers", "Flask", "chairs", "drums", "cup"];
 
 const galleryData = [
   {
@@ -144,6 +144,149 @@ const galleryData = [
     image: "/images/products/plate4.jpg",
     details:
       "Lightweight plastic plates perfect for daily meals.",
+  },
+
+    {
+    id: 14,
+    category: "chairs",
+    title: "Unbreakable Chair Set",
+    code: "MG-014",
+    status: "In Stock",
+    image: "/images/products/chairs1.jpg",
+    details:
+      "Lightweight plastic chairs perfect for daily use.",
+  },
+
+    {
+    id: 15,
+    category: "chairs",
+    title: "Unbreakable Chair Set",
+    code: "MG-015",
+    status: "In Stock",
+    image: "/images/products/chairs2.jpg",
+    details:
+      "Lightweight plastic chairs perfect for daily use.",
+  },
+
+  {
+    id: 16,
+    category: "chairs",
+    title: "Unbreakable Chair Set",
+    code: "MG-016",
+    status: "In Stock",
+    image: "/images/products/chairs3.jpg",
+    details:
+      "Lightweight plastic chairs perfect for daily use.",
+  },
+
+  {
+    id: 17,
+    category: "chairs",
+    title: "Unbreakable Chair Set",
+    code: "MG-017",
+    status: "In Stock",
+    image: "/images/products/chairs4.jpg",
+    details:
+      "Lightweight plastic chairs perfect for daily use.",
+  },
+
+    {
+    id: 18,
+    category: "Buckets",
+    title: "Premium Household Bucket",
+    code: "MG-018",
+    status: "In Stock",
+    image: "/images/products/bucket3.jpg",
+    details:
+      "Durable bucket suitable for cleaning and outdoor use.",
+  },
+
+  {
+    id: 19,
+    category: "drums",
+    title: "Premium Household Drum",
+    code: "MG-019",
+    status: "Bulk Ready for Supply Only",
+    image: "/images/products/drum1.jpg",
+    details:
+      "Durable drum suitable for cleaning and outdoor use.",
+  },
+
+  {
+    id: 20,
+    category: "drums",
+    title: "Premium Household Drum",
+    code: "MG-020",
+    status: "Bulk Ready for Supply Only",
+    image: "/images/products/drum2.jpg",
+    details:
+      "Durable drum suitable for cleaning and outdoor use.",
+  },
+
+  {
+    id: 21,
+    category: "Buckets",
+    title: "Premium Household Bucket",
+    code: "MG-021",
+    status: "In Stock",
+    image: "/images/products/bucket4.jpg",
+    details:
+      "Durable bucket suitable for cleaning and outdoor use.",
+  },
+
+  {
+    id: 22,
+    category: "Buckets",
+    title: "Premium Household Bucket",
+    code: "MG-022",
+    status: "In Stock",
+    image: "/images/products/bucket5.jpg",
+    details:
+      "Durable bucket suitable for cleaning and outdoor use.",
+  },
+
+  {
+    id: 23,
+    category: "Containers",
+    title: "Food Storage Container",
+    code: "MG-023",
+    status: "Available",
+    image: "/images/products/container2.jpg",
+    details:
+      "Airtight container for storing food safely.",
+  },
+
+  {
+    id: 24,
+    category: "Containers",
+    title: "Food Storage Container",
+    code: "MG-024",
+    status: "Available",
+    image: "/images/products/container3.jpg",
+    details:
+      "Container for storing salt safely.",
+  },
+
+  {
+    id: 25,
+    category: "cup",
+    title: "Cup Set",
+    code: "MG-025",
+    status: "Bulk Ready for Supply Only",
+    image: "/images/products/cup1.jpg",
+    details:
+      "Tea cup suitable for daily use.",
+  },
+
+  {
+    id: 26,
+    category: "cup",
+    title: "Cup Set",
+    code: "MG-026",
+    status: "Bulk Ready for Supply Only",
+    image: "/images/products/cup2.jpg",
+    details:
+      "Tea cup suitable for daily use.",
   },
 ];
 

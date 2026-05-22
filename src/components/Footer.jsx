@@ -18,7 +18,7 @@ function Footer() {
     <div className="footer-brand">
 
       <img
-        src="/logo.png"
+        src="/footerlogo.png"
         alt="More Grace & Blessing"
         className="footer-logo"
       />
